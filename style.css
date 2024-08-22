@@ -4,6 +4,11 @@
 
 :root{
 	--screen-height: 95vh;
+	font-size: 16px;
+}
+
+.not-in-mobile{
+	display:none;
 }
 
 body{
@@ -18,18 +23,18 @@ button{
 }
 
 #logo-container{
-	height: calc(0.1 * var(--screen-height));
+	height: 8vh;
 }
 #input-container{
-	height: calc(0.55 * var(--screen-height));
+	height: 50vh;
 }
 
 textarea{
 	background-color: rgba(0,0,0,0);
 	border-color: rgba(0,0,0,0);
 	resize: none;
-	min-height: 25vh;
-	min-width: 90vw;
+	min-width: 90%;
+	height: 50%;
 }
 
 #input-container ::placeholder{
@@ -63,14 +68,14 @@ button{
 }
 
 #output-container{
-	height: calc(0.35 * var(--screen-height));
+	height: 40vh;
 }
 
 #text-wrapper{
 	font-size: 4rem;
-	height: 20vh;
-	width: 90vw;
-	margin: auto;
+	height: 80%;
+	width: 85%;
+	margin: 10% auto;
 	background-color: white;
 	border-radius: 50px;
 	text-align: center;
@@ -80,14 +85,127 @@ button{
 	box-shadow: 0px 40px 50px 10px #CED4DA;
 }
 
-#text-wrapper p{
-	margin: 0;
-}
-
 #output-p1{
 	font-weight: 600;
+	margin-bottom: 0;
 }
 
 #output-p2{
 	font-size: 2.5rem;
+	margin-top: 0;
+}
+
+@media (min-width: 1080px) {
+	body{
+		display: grid;
+		grid-template-rows: 10% 90%;
+		grid-template-columns: 70% 30%;
+		grid-template-areas:	"logo out"
+								"in out";
+	}
+
+	.not-in-mobile{
+		display:block;
+	}
+	
+	.container{
+		margin: 0;
+	}
+	
+	#logo-container{
+		grid-area: logo;
+		height: 9vh;
+	}
+	
+	#input-container{
+		grid-area: in;
+		height: 88vh;
+		font-size: 2rem;
+	}
+	
+	#input-container ::placeholder{
+		color: #0a3871;
+		font-size: 2rem;
+		font-weight: 400;
+	}
+	
+	#output-container{
+		grid-area: out;
+		height: 98vh;
+	}
+	
+	textarea{
+		width: 60%;
+		min-width: 60%;
+		height: 70%;
+		margin-top: 5%;
+		margin-left: 25%;
+	}
+
+	#input-container p{
+		font-size: 0.7rem;
+		width: 60%;
+		margin-left: 25%;
+	}
+	
+	#button-container{
+		width: 60%;
+		margin-left: 25%;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	button{
+		height: 5vh;
+		width: 25vw;
+		font-size: 1rem;
+	}
+
+	#btn1, #btn2{
+		margin: 0;
+	}
+	
+	#btn2{
+		background-color: #d8dfe8;
+	}
+
+	#text-wrapper{
+		font-size: 1rem;
+		height: 95%;
+		width: 95%;
+		margin: 5% auto;
+		background-color: white;
+		border-radius: 50px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		box-shadow: 0px 40px 50px 10px #CED4DA;
+	}
+	
+	.out-img{
+		height: 40%;
+		width: 75%;
+		margin: 0 auto;
+	}
+	
+	#text-wrapper p{
+		width: 70%;
+	}
+
+	#output-p1{
+		font-size: 2rem;
+		font-weight: 600;
+		margin: 7% auto;
+	}
+
+	#output-p2{
+		font-size: 1.5rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.hidden{
+	display:none;
 }

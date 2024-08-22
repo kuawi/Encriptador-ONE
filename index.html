@@ -6,9 +6,9 @@
 		<title>Encriptador</title>
 	</head>
 	<body>
-		<div id="logo-container">
+		<div id="logo-container" class="container">
 		</div>
-		<div id="input-container">
+		<div id="input-container" class="container">
 			<textarea placeholder = "Ingrese el texto aqui"></textarea>
 			<p>Solo letras minúsculas y sin acentos</p>
 			<div id="button-container">
@@ -16,10 +16,12 @@
 				<button type="button" id="btn2">Desencriptar</button>
 			</div>
 		</div>
-		<div id="output-container">
+		<div id="output-container" class="container">
 			<div id="text-wrapper">
-				<p id="output-p1">Ningún mensaje fue encontrado</p>
-				<p id="output-p2" >Ingresa el texto que desees encriptar o desencriptar.</p>
+				<img class="not-in-mobile out-img" src="img.png">
+				<p id="output-p1" class="reemplazar-con-img">Ningún mensaje fue encontrado</p>
+				<p id="output-p2" class="reemplazar-con-img">Ingresa el texto que desees encriptar o desencriptar.</p>
+				<p id="output-p3" class="hidden"></p>
 			</div>
 		</div>
 	</body>

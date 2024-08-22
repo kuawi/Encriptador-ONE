@@ -2,12 +2,16 @@ const clave = {"e": "enter", "i": "imes", "a": "ai", "o": "ober", "u": "ufat"};
 const inputBox = document.querySelector('textarea');
 const encBtn = document.querySelector('#btn1');
 const deseBtn = document.querySelector('#btn2');
-const outputBox = document.querySelector('#output-p1');
+const outputBox = document.querySelector('#output-p3');
+const p1 = document.querySelector('#output-p1');
+const p2 = document.querySelector('#output-p2');
+const img = document.querySelector('.out-img');
 
 encBtn.addEventListener('click', encriptar);
 deseBtn.addEventListener('click', desencriptar);
 
 function encriptar(){
+	adjustDisplay()
 	let msg = inputBox.value;
 	let vocales = [...msg.matchAll(/[aeiou]/g)].map((e) => e[0]);
 	let sinVocales = msg.split(/[aeiou]/);
@@ -15,6 +19,7 @@ function encriptar(){
 }
 
 function desencriptar(){
+	adjustDisplay()
 	let msg = inputBox.value;
 	let reemplazables = [...msg.matchAll(/ai|enter|imes|ober|ufat/g)].map((e) => e[0]);
 	let vocales = reemplazables.map((str) => str[0]);
@@ -34,4 +39,11 @@ function makeString(arr1, arr2, mod){
 		}
 	}
 	return res.reverse().join('');
+}
+
+function adjustDisplay(){
+	outputBox.classList.remove('hidden');
+	p1.classList.add('hidden');
+	p2.classList.add('hidden');
+	img.classList.add('hidden');	
 }
