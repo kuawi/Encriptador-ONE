@@ -35,11 +35,12 @@ textarea{
 	resize: none;
 	min-width: 90%;
 	height: 50%;
+	font-size: 40px;
 }
 
 #input-container ::placeholder{
 	color: #0a3871;
-	font-size: 5em;
+	font-size: 40px;
 	font-weight: 500;
 }
 
@@ -92,6 +93,11 @@ button{
 
 #output-p2{
 	font-size: 2.5rem;
+	margin-top: 0;
+}
+
+#output-p3{
+	font-size: 40px;
 	margin-top: 0;
 }
 
