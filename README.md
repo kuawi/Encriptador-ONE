@@ -28,7 +28,7 @@ Vista para dispositivo móvil:
 * Funciona solo con letras minúsculas.
 * No encripta letras con acentos ni caracteres especiales.
 
-El diseño del front end se hizo a partir de este [diseño en figma] (https://www.figma.com/design/trP3p5nEh7XUyB3n2bomjP/Alura-Challenge---Desaf%C3%ADo-1---L%C3%B3gica?node-id=0-1&t=J3eaw8cZjFaQHPC0-0).
+El diseño del front end se hizo a partir de este [diseño en figma](https://www.figma.com/design/trP3p5nEh7XUyB3n2bomjP/Alura-Challenge---Desaf%C3%ADo-1---L%C3%B3gica?node-id=0-1&t=J3eaw8cZjFaQHPC0-0).
 
 ## Live Demo
 
